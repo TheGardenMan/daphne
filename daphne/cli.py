@@ -94,13 +94,13 @@ class CommandLineInterface:
             "--ping-interval",
             type=int,
             help="The number of seconds a WebSocket must be idle before a keepalive ping is sent",
-            default=20,
+            default=1,
         )
         self.parser.add_argument(
             "--ping-timeout",
             type=int,
             help="The number of seconds before a WebSocket is closed if no response to a keepalive ping",
-            default=30,
+            default=1,
         )
         self.parser.add_argument(
             "--application-close-timeout",
