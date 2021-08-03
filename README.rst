@@ -1,3 +1,5 @@
+I have reduced ping-time in daphne to detect disconnects instantly
+
 daphne
 ======
 
