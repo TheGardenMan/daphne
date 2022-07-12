@@ -22,12 +22,10 @@ setup(
     package_dir={"twisted": "daphne/twisted"},
     packages=find_packages() + ["twisted.plugins"],
     include_package_data=True,
-    install_requires=["twisted[tls]>=18.7", "autobahn>=0.18", "asgiref>=3.2.10,<4"],
-    python_requires=">=3.6",
+    install_requires=["twisted[tls]>=22.4", "autobahn>=22.4.2", "asgiref>=3.5.2,<4"],
+    python_requires=">=3.7",
     setup_requires=["pytest-runner"],
-    extras_require={
-        "tests": ["hypothesis==4.23", "pytest~=3.10", "pytest-asyncio~=0.8"]
-    },
+    extras_require={"tests": ["hypothesis", "pytest", "pytest-asyncio"]},
     entry_points={
         "console_scripts": ["daphne = daphne.cli:CommandLineInterface.entrypoint"]
     },
@@ -39,10 +37,10 @@ setup(
         "Operating System :: OS Independent",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
         "Topic :: Internet :: WWW/HTTP",
     ],
 )
